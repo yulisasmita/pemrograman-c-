@@ -1,0 +1,29 @@
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+int main(int argc, char **argv)
+{
+	int data[5]={5,2,6,4,1},a,b,tampung;
+    
+    for(a=1;a<5;a++)
+    {
+        tampung = data[a];
+        b = a-1;
+        
+        while(data[b] > tampung && b > -1)
+        {
+            data[b+1]=data[b];
+            b--;
+        }
+        
+        data[b+1] = tampung;
+    }
+    
+    cout <<"data terurut: ";
+    for(a=0;a<5;a++)
+    {
+        cout << data[a] <<" ";
+    }
+	return 0;
+}
